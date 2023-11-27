@@ -1,6 +1,6 @@
 package com.CRUD.Project.Controllers;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import static com.CRUD.Project.CrudApplication.Classes ;
-import static com.CRUD.Project.CrudApplication.Etudiants;
+
 
 import com.CRUD.Project.entities.Classe;
-import com.CRUD.Project.entities.Etudiant;
+
 
 
 @Controller
@@ -78,7 +78,7 @@ public class ClassControllers {
 
 	//Modifer
 		@GetMapping("/edit/{id}")
-		public String editStudent(@PathVariable("id") int id ,Model model ) {
+		public String editClass(@PathVariable("id") int id ,Model model ) {
 	        
 			for(Classe c:Classes) 
 	        {
