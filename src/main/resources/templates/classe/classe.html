@@ -1,0 +1,61 @@
+<!doctype html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <title> Système de Gestion des Classes </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Système De Gestion Des Classes</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  
+</nav>
+<br>
+
+ <div class ="container"> 
+      <div class ="row">
+       <h1>Les Classes </h1>
+      </div>
+      <br>
+      
+      <div class ="row">
+        <div class ="col-lg-3">
+       <a  th:href="@{/fst/nouvelClass}"   class="btn btn-info" >Ajouter</a> 
+       
+        </div>
+      
+      <table class="table table-striped table-bordered">
+        <thead class ="table-dark">
+            <tr>
+            <th> Identifiant </th>
+            <th> Nom De Classe </th>
+            <th>  Action         </th> 
+            </tr>
+        </thead>
+        <tBody>
+          <tr th:each="c:${Classes}">
+            <td th:text="${c.id}"></td>
+            <td th:text="${c.nom}"></td> 
+           
+            
+            <td>
+                 <a class="btn btn-primary" th:href="@{/fst/edit/{id}(id=${c.id})}">Modifier</a> 
+                 <a class="btn btn-danger" th:href="@{/fst/delete/{id}  (id=${c.id}) }">Supprimer</a>
+                  
+            </td> 
+             
+          </tr>
+        </tBody>
+      </table>
+      
+     
+ </div>
+
+
+</body>
+</html>

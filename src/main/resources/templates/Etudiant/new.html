@@ -1,0 +1,75 @@
+<title> Systeme de Gestion des Etudiants </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Syst�me De Gestion Des Etudiants</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"  th:href="@{#}">Gestion Des Etudiants</a>  
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class ="container mt-5  col-md-6  card-body  text-primary  justify-content-center">
+    <div class="row  card-header  justify-content-center  border border-info border bg-light ">
+      <div  class="justify-content-center ">
+          <div >
+            <h1   class="  font-weight-bolder text-center  text-secondary " > Inscription</h1>
+           </div>
+           <div class=" card-text">  
+                
+           
+                      <form  method="POST">
+                      <div class="form-row">
+                      <label for="exampleFormControlInput1">ID:</label>
+                      <input type="id" class="form-control" placeholder="ID" required="id" name="id">
+                      </div>
+                      </div>
+                      
+                       <div class="form-row">
+                       <label for="exampleFormControlInput1">Nom:</label>
+                       <input type="text" class="form-control" placeholder="First name" required="text" name="nom">
+                       </div>
+                       <div class="form-row">
+                       <label for="exampleFormControlInput1">Prenom:</label>
+                       <input type="text" class="form-control" placeholder="Last name" required="text" name="prenom">
+                       </div>
+                     
+                       <div class="form-row">
+                       <label for="exampleFormControlInput1">Adresse:</label>
+                        <input type="text" class="form-control" placeholder="Adress" required="text" name="adresse">
+                        </div>
+                        
+                        <div class="form-group">
+                        <label for="exampleFormControlInput1">E-mail:</label>
+                        <input type="email" class="form-control"  placeholder="name@example.com" required="email" name="email">
+                        </div>
+                         
+                         <div >
+                         <button type="submit" class="btn btn-primary btn-sm" >submit</button>
+                         
+                         </div>
+                         
+                         
+                         
+                          </form>
+                
+              
+                             
+           </div>     
+
+   </div>
+  </div>
+  
+  
+

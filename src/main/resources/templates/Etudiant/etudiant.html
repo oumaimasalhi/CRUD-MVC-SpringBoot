@@ -1,0 +1,71 @@
+<!doctype html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <title> Système de Gestion des Etudiants </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Système De Gestion Des Etudiants</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+ 
+</nav>
+
+
+<br>
+
+
+ <div class ="container"> 
+      <div class ="row">
+       <h1>Liste des étudiants </h1>
+      </div>
+      <br>
+      <div class ="row">
+       <div class ="col-lg-3">
+        <a  th:href="@{/student/new}"   class="btn btn-info" >Ajouter</a>
+        
+       
+       
+        </div>
+      
+      <table class="table table-striped table-bordered">
+        <thead class ="table-dark">
+            <tr>
+            <th> Identifiant </th>
+            <th> Nom Etudiant </th>
+            <th> Prenom Etudiant </th>
+            
+            <th> Adresse Email </th>
+            <th> Adresse </th>
+            <th > Action       </th>
+            </tr>
+        </thead>
+        <tBody>
+          <tr th:each="s:${Etudiants}">
+            <td th:text="${s.id}"></td>
+            <td th:text="${s.nom}"></td>
+            <td th:text="${s.prenom}"></td>
+            <td th:text="${s.adresse}"></td>
+            <td th:text="${s.email}"></td>
+            
+            <td>
+                  <a class="btn btn-primary" th:href="@{/student/edit/{id}(id=${s.id})}">Modifier</a>
+                  <a class="btn btn-danger" th:href="@{/student/delete/{id}  (id=${s.id}) }">Supprimer</a>
+                  
+            </td>
+             
+          </tr>
+        </tBody>
+      </table>
+ </div>
+  
+</body>
+</html>
